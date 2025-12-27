@@ -1,0 +1,7 @@
+com\fullstack\service\UserService.class
+com\fullstack\controller\UserWebController.class
+com\fullstack\FullstackWebsiteApplication.class
+com\fullstack\repository\UserRepository.class
+com\fullstack\config\WebConfig.class
+com\fullstack\entity\User.class
+com\fullstack\controller\UserApiController.class

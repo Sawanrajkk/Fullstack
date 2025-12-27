@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body class="bg-gradient">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+
+            <div class="glass-card p-4 fade-in">
+
+                <div class="text-center mb-4">
+                    <h2 class="page-title"
+                        th:text="${user.id != null ? 'Edit User' : 'Create User'}"></h2>
+                    <p class="page-subtitle">Secure user information</p>
+                </div>
+
+                <form th:action="${user.id != null ? '/users/update/' + user.id : '/users'}"
+                      th:object="${user}" method="post">
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" th:field="*{name}" placeholder="Name">
+                        <label><i class="bi bi-person"></i> Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" th:field="*{email}" placeholder="Email">
+                        <label><i class="bi bi-envelope"></i> Email</label>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <input type="tel" class="form-control" th:field="*{phone}" placeholder="Phone">
+                        <label><i class="bi bi-telephone"></i> Phone</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100 btn-lg mb-3">
+                        <i class="bi bi-check-circle"></i>
+                        <span th:text="${user.id != null ? 'Update User' : 'Create User'}"></span>
+                    </button>
+
+                    <a href="/" class="btn btn-outline-light w-100">
+                        <i class="bi bi-arrow-left"></i> Back to Dashboard
+                    </a>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

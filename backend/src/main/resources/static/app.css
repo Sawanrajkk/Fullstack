@@ -1,0 +1,143 @@
+/* ===== GLOBAL BACKGROUND ===== */
+/* ==== HARD RESET FOR WHITE AREAS ==== */
+
+body,
+html {
+    background: linear-gradient(135deg, #6174c8, #2b66ef, #040f44) !important;
+    min-height: 100vh;
+}
+
+/* kill bootstrap white surfaces */
+.container,
+.container-fluid,
+.table,
+.table-responsive,
+.card,
+.card-body {
+    background-color: transparent !important;
+}
+
+
+/* ===== REMOVE WHITE FROM BOOTSTRAP ===== */
+.container,
+.table,
+.table-responsive {
+    background: transparent !important;
+}
+
+/* ===== NAVBAR ===== */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #f9fafb;
+}
+
+/* ===== PAGE TITLES ===== */
+.page-title {
+    color: #f9fafb;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    color: #9ca3af;
+}
+
+/* ===== TABLE (NO WHITE) ===== */
+.table {
+    color: #e5e7eb;
+}
+
+.table thead {
+    background: rgba(2, 6, 23, 0.9);
+}
+
+.table thead th {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.table tbody tr {
+    background: transparent;
+}
+
+.table tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+/* ===== BADGES ===== */
+.badge {
+    background: rgba(255,255,255,0.08);
+    color: #f9fafb;
+}
+
+/* ===== ICON BUTTONS ===== */
+.icon-btn {
+    background: rgba(255,255,255,0.06);
+    color: #e5e7eb;
+}
+
+.icon-btn.edit {
+    background: rgba(234,179,8,0.15);
+    color: #facc15;
+}
+
+.icon-btn.delete {
+    background: rgba(239,68,68,0.15);
+    color: #f87171;
+}
+
+/* ===== FORM INPUTS (REMOVE WHITE) ===== */
+.form-control {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #f9fafb;
+}
+
+.form-control:focus {
+    background: rgba(15, 23, 42, 1);
+    color: #fff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.15rem rgba(59,130,246,.25);
+}
+
+.form-floating label {
+    color: #9ca3af;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border: none;
+}
+
+.btn-outline-light {
+    border-color: rgba(255,255,255,0.4);
+    color: #f9fafb;
+}
+
+/* ===== ALERTS ===== */
+.alert {
+    background: rgba(239,68,68,0.15);
+    color: #fecaca;
+    border: 1px solid rgba(239,68,68,0.3);
+}
+
+/* ===== ANIMATION ===== */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
